@@ -2,7 +2,6 @@ import React from "react";
 import { useState, useCallback, useMemo } from "react";
 import Results from "./Results";
 import "../styles/SearchBar.css";
-import Searcher from "./Searcher";
 
 const SearchBar = ({
   items,

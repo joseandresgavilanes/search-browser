@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect, useMemo, useState } from "react";
-import MarkedItem from "./MarkedItem";
 import "../styles/Results.css";
+import MarkedItem from "./MarkedItem";
 
 const Results = ({ items, onItemSelected, query, onResultsCalculated }) => {
   const [results, setResults] = useState([]);
