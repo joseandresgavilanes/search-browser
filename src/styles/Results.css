@@ -1,0 +1,37 @@
+.result_main_container{
+    padding: 20px 180px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+
+.result_container{
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+
+.result_container_more{
+    display: flex;
+    align-items: center;
+    gap: 1.2em;
+    font-size: 14px;
+    color: #BDC1C6;
+}
+
+.result_container_result{
+    color: #8AB4F8;
+    font-size: 20px;
+    width: 500px;
+    cursor: pointer;
+}
+
+.result_container_text{
+    color: #BDC1C6;
+    font-size: 15px;
+line-height: 20px;
+}

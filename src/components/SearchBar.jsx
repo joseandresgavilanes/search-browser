@@ -13,7 +13,7 @@ const SearchBar = ({
   setData,
   setCurrentOption,
 }) => {
-  const [query, setQuery] = useState("mi");
+  const [query, setQuery] = useState("a");
   const [results, setResults] = useState([]);
 
   function handleOnChange(e) {
@@ -70,13 +70,7 @@ const SearchBar = ({
         >
           <div class="searchbar-wrapper">
             <div class="searchbar-left">
-              <div class="search-icon-wrapper">
-                <span class="search-icon searchbar-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                    <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
-                  </svg>
-                </span>
-              </div>
+              <div class="search-icon-wrapper"></div>
             </div>
 
             <div class="searchbar-center">
@@ -119,24 +113,59 @@ const SearchBar = ({
                 ></path>
               </svg>
             </div>
+            <div class="searchbar-left">
+              <div class="search-icon-wrapper">
+                <span class="search-icon searchbar-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+                  </svg>
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
       <div className="searchBar_container_categories">
-        <button name="all" onClick={handleClick}>
-          Search in All
+        <button
+          className="searchBar_container_categories_btn"
+          name="all"
+          onClick={handleClick}
+        >
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <p>All</p>
         </button>
-        <button name="emails" onClick={handleClick}>
-          Search in Emails
+        <button
+          className="searchBar_container_categories_btn"
+          name="emails"
+          onClick={handleClick}
+        >
+          <i class="fa-solid fa-envelope"></i>
+          Emails
         </button>
-        <button name="calendar" onClick={handleClick}>
-          Search in Calendar
+        <button
+          className="searchBar_container_categories_btn"
+          name="calendar"
+          onClick={handleClick}
+        >
+          <i class="fa-solid fa-calendar-days"></i>
+          Calendar
         </button>
-        <button name="people" onClick={handleClick}>
-          Search in People
+        <button
+          className="searchBar_container_categories_btn"
+          name="people"
+          onClick={handleClick}
+        >
+          <i class="fa-solid fa-user"></i>
+          People
         </button>
       </div>
-      {results && <div>{results.length} results</div>}
+      <div className="search_line"></div>
+      {results && (
+        <div className="results_number">
+          {" "}
+          About {results.length} results (0.30 seconds)
+        </div>
+      )}
 
       <Results
         items={items}

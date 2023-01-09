@@ -1,5 +1,6 @@
 import React from "react";
 import { useMemo } from "react";
+import "../styles/Results.css";
 
 const MarkedItem = ({ item, onClick, query }) => {
   const { left, center, right } = useMemo(
@@ -27,15 +28,11 @@ const MarkedItem = ({ item, onClick, query }) => {
   return (
     <div className="result_container">
       <div className="result_container_more">
-        <div className="result_container_more_link">
-          https://krugercorp.com/
-          <i class="fa-solid fa-ellipsis-vertical"></i>
-        </div>
+        https://krugercorp.com/
+        <i class="fa-solid fa-ellipsis-vertical"></i>
       </div>
       <div className="result_container_result" href="#" onClick={handleClick}>
-        {left}
-        <div>{center}</div>
-        {right}
+        {item.title}
       </div>
       <p className="result_container_text">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic doloremque,

@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect, useMemo, useState } from "react";
 import MarkedItem from "./MarkedItem";
+import "../styles/Results.css";
 
 const Results = ({ items, onItemSelected, query, onResultsCalculated }) => {
   const [results, setResults] = useState([]);
@@ -23,7 +24,7 @@ const Results = ({ items, onItemSelected, query, onResultsCalculated }) => {
     return res;
   }
   return (
-    <div>
+    <div className="result_main_container">
       {query !== ""
         ? filteredItems.map((item) => (
             <MarkedItem
