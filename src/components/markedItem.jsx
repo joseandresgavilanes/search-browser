@@ -25,10 +25,22 @@ const MarkedItem = ({ item, onClick, query }) => {
   }
 
   return (
-    <div href="#" onClick={handleClick}>
-      {left}
-      <div>{center}</div>
-      {right}
+    <div className="result_container">
+      <div className="result_container_more">
+        <div className="result_container_more_link">
+          https://krugercorp.com/
+          <i class="fa-solid fa-ellipsis-vertical"></i>
+        </div>
+      </div>
+      <div className="result_container_result" href="#" onClick={handleClick}>
+        {left}
+        <div>{center}</div>
+        {right}
+      </div>
+      <p className="result_container_text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic doloremque,
+        ad ex cum tempora accusantium facere! Dolorem hic alias placeat!
+      </p>
     </div>
   );
 };

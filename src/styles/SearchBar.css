@@ -1,0 +1,21 @@
+.google_search_bar{
+    background-color: #202124;
+    color: white;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.searchBar_container_bar{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.searchBar_container_bar_img{
+    width: 100px;
+}
+
+.searchBar_container_bar_main{
+    display: flex;
+    flex-direction: column;
+}

@@ -77,51 +77,21 @@ const Search = () => {
   const [selection, setSelection] = useState(null);
   const [currentOption, setCurrentOption] = useState("all");
 
-  function handleClick(e) {
-    const location = e.target.name;
-
-    switch (location) {
-      case "all":
-        setData([...people, ...emails, ...calendar]);
-        setCurrentOption("all");
-        break;
-
-      case "people":
-        setData([...people]);
-        setCurrentOption("people");
-        break;
-
-      case "emails":
-        setData([...emails]);
-        setCurrentOption("emails");
-        break;
-
-      case "calendar":
-        setData([...calendar]);
-        setCurrentOption("calendar");
-        break;
-    }
-  }
-
   function handleOnItemSelected(item) {
     setSelection(item);
   }
 
   return (
     <div className="google_search_bar">
-      <SearchBar items={data} onItemSelected={handleOnItemSelected} />
-      <button name="all" onClick={handleClick}>
-        Search in All
-      </button>
-      <button name="emails" onClick={handleClick}>
-        Search in Emails
-      </button>
-      <button name="calendar" onClick={handleClick}>
-        Search in Calendar
-      </button>
-      <button name="people" onClick={handleClick}>
-        Search in People
-      </button>
+      <SearchBar
+        emails={emails}
+        calendar={calendar}
+        people={people}
+        items={data}
+        onItemSelected={handleOnItemSelected}
+        setCurrentOption={setCurrentOption}
+        setData={setData}
+      />
       {selection ? <div>You selected: {selection.title}</div> : ""}
     </div>
   );
