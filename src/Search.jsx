@@ -108,7 +108,8 @@ const Search = () => {
   }
 
   return (
-    <div className="App">
+    <div className="google_search_bar">
+      <SearchBar items={data} onItemSelected={handleOnItemSelected} />
       <button name="all" onClick={handleClick}>
         Search in All
       </button>
@@ -122,7 +123,6 @@ const Search = () => {
         Search in People
       </button>
       {selection ? <div>You selected: {selection.title}</div> : ""}
-      <SearchBar items={data} onItemSelected={handleOnItemSelected} />
     </div>
   );
 };
