@@ -25,6 +25,8 @@ const MarkedItem = ({ item, onClick, query }) => {
     onClick(item);
   }
 
+  console.log(left, right, center);
+
   return (
     <div className="result_container">
       <div className="result_container_more">
