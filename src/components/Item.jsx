@@ -2,7 +2,7 @@ import React from "react";
 import { useMemo } from "react";
 import "../styles/Results.css";
 
-const MarkedItem = ({ item, onClick, query }) => {
+const Item = ({ item, onClick, query }) => {
   const { left, center, right } = useMemo(
     () => getPositions(item, query),
     [item, query]
@@ -44,4 +44,4 @@ const MarkedItem = ({ item, onClick, query }) => {
   );
 };
 
-export default MarkedItem;
+export default Item;
